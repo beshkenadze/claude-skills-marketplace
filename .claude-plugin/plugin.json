@@ -1,14 +1,12 @@
 {
-  "name": "claude-skills-marketplace",
+  "name": "skills-marketplace",
   "version": "1.0.0",
   "description": "A marketplace of Claude Agent Skills for various tasks",
-  "author": "beshkenadze",
+  "author": {
+    "name": "beshkenadze",
+    "url": "https://git.bshk.app/beshkenadze"
+  },
   "repository": "https://git.bshk.app/beshkenadze/claude-skills-marketplace",
-  "skills": [
-    "skills/meta/skill-creator",
-    "skills/creative/markdown-formatter",
-    "skills/development/code-reviewer",
-    "skills/enterprise/meeting-notes",
-    "skills/document/json-schema"
-  ]
+  "license": "MIT",
+  "keywords": ["skills", "marketplace", "productivity"]
 }
