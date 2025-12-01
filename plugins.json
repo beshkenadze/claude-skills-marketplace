@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "skills-marketplace",
+      "version": "1.0.0",
+      "description": "A marketplace of Claude Agent Skills for various tasks",
+      "path": ".",
+      "skills": [
+        "skills/meta/skill-creator",
+        "skills/creative/markdown-formatter",
+        "skills/development/code-reviewer",
+        "skills/enterprise/meeting-notes",
+        "skills/document/json-schema"
+      ]
+    }
+  ]
+}
