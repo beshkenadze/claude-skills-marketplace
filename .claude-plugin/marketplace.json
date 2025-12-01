@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "name": "skills-marketplace",
+  "description": "A marketplace of Claude Agent Skills for various tasks",
+  "skills": [
+    {
+      "name": "skill-creator",
+      "path": "skills/meta/skill-creator",
+      "description": "Create new Claude Agent Skills through interactive guidance. Use when asked to create a skill, build a skill, make a new skill, or help with skill development.",
+      "category": "meta"
+    },
+    {
+      "name": "code-reviewer",
+      "path": "skills/development/code-reviewer",
+      "description": "Review code for quality, security, and best practices. Use when asked to review code, find bugs, or suggest improvements.",
+      "category": "development"
+    },
+    {
+      "name": "markdown-formatter",
+      "path": "skills/creative/markdown-formatter",
+      "description": "Format and structure content as clean, well-organized Markdown. Use when asked to create documentation, format text, or generate Markdown output.",
+      "category": "creative"
+    },
+    {
+      "name": "meeting-notes",
+      "path": "skills/enterprise/meeting-notes",
+      "description": "Structure meeting transcripts into organized notes with action items, decisions, and key points. Use when processing meeting recordings or creating meeting summaries.",
+      "category": "enterprise"
+    },
+    {
+      "name": "json-schema",
+      "path": "skills/document/json-schema",
+      "description": "Generate and validate JSON Schema definitions. Use when asked to create schemas, validate JSON structure, or document API payloads.",
+      "category": "document"
+    }
+  ],
+  "categories": [
+    {
+      "id": "meta",
+      "name": "Meta",
+      "description": "Skills about skills"
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "description": "Art, design, content creation"
+    },
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Code, debugging, DevOps"
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "description": "Business, communication, workflows"
+    },
+    {
+      "id": "document",
+      "name": "Document",
+      "description": "File generation, formatting"
+    }
+  ]
+}
