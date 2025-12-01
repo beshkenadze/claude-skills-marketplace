@@ -10,35 +10,35 @@
     {
       "name": "skill-creator",
       "description": "Create new Claude Agent Skills through interactive guidance. Use when asked to create a skill, build a skill, make a new skill, or help with skill development.",
-      "source": "skills/meta/skill-creator",
+      "source": "./skills/meta/skill-creator",
       "category": "meta",
       "version": "1.0.0"
     },
     {
       "name": "code-reviewer",
       "description": "Review code for quality, security, and best practices. Use when asked to review code, find bugs, or suggest improvements.",
-      "source": "skills/development/code-reviewer",
+      "source": "./skills/development/code-reviewer",
       "category": "development",
       "version": "1.0.0"
     },
     {
       "name": "markdown-formatter",
       "description": "Format and structure content as clean, well-organized Markdown. Use when asked to create documentation, format text, or generate Markdown output.",
-      "source": "skills/creative/markdown-formatter",
+      "source": "./skills/creative/markdown-formatter",
       "category": "creative",
       "version": "1.0.0"
     },
     {
       "name": "meeting-notes",
       "description": "Structure meeting transcripts into organized notes with action items, decisions, and key points. Use when processing meeting recordings or creating meeting summaries.",
-      "source": "skills/enterprise/meeting-notes",
+      "source": "./skills/enterprise/meeting-notes",
       "category": "enterprise",
       "version": "1.0.0"
     },
     {
       "name": "json-schema",
       "description": "Generate and validate JSON Schema definitions. Use when asked to create schemas, validate JSON structure, or document API payloads.",
-      "source": "skills/document/json-schema",
+      "source": "./skills/document/json-schema",
       "category": "document",
       "version": "1.0.0"
     }
