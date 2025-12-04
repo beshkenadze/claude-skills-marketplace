@@ -48,6 +48,13 @@
       "source": "./skills/development/swiftui-developer",
       "category": "development",
       "version": "1.0.0"
+    },
+    {
+      "name": "wget-reader",
+      "description": "Read and fetch data from URLs using wget. Use when asked to download content, fetch remote files, or read data from web URLs.",
+      "source": "./skills/utility/wget-reader",
+      "category": "utility",
+      "version": "1.0.0"
     }
   ]
 }
