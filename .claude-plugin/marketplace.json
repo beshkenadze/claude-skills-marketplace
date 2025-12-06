@@ -55,6 +55,27 @@
       "source": "./skills/utility/wget-reader",
       "category": "utility",
       "version": "1.0.0"
+    },
+    {
+      "name": "gitea-wiki",
+      "description": "Manage Gitea wiki pages efficiently. Use when working with wiki content, creating documentation, or updating wiki pages. Handles base64 encoding/decoding via helper scripts.",
+      "source": "./skills/development/gitea-wiki",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "git-worktree-workflow",
+      "description": "Manage git worktrees for branch isolation. Use when creating feature branches, working on isolated tasks, creating PRs, and cleaning up after merge.",
+      "source": "./skills/development/git-worktree-workflow",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "research-guide",
+      "description": "Research best practices, guides, and libraries for any topic. Use when needing documentation, recommendations, implementation guidance, or library comparisons. Outputs detailed reports based on project context.",
+      "source": "./skills/development/research-guide",
+      "category": "development",
+      "version": "1.0.0"
     }
   ]
 }
