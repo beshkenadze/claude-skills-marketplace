@@ -101,7 +101,8 @@ claude-skills-marketplace/
 │       └── SKILL.md
 ├── docs/                      # Documentation
 │   ├── CREATING_SKILLS.md
-│   └── API_SKILLS.md
+│   ├── API_SKILLS.md
+│   └── SKILLS_BEST_PRACTICES.md
 └── CONTRIBUTING.md
 ```
 
