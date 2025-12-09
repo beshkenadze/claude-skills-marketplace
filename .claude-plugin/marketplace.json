@@ -64,6 +64,13 @@
       "version": "1.0.0"
     },
     {
+      "name": "dev-workflow",
+      "description": "Orchestrates full development workflow with git worktrees, Codex CLI code review, and issue tracking. Use when implementing features across issues, starting structured development, or when user mentions workflow, implement issues, or needs PR-based development with code review.",
+      "source": "./skills/development/dev-workflow",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
       "name": "git-worktree-workflow",
       "description": "Manage git worktrees for branch isolation. Use when creating feature branches, working on isolated tasks, creating PRs, and cleaning up after merge.",
       "source": "./skills/development/git-worktree-workflow",
