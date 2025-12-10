@@ -6,6 +6,7 @@
 |------|---------|----------|
 | **Codex CLI** | `codex review --base main` | Detailed P1-P4 priority findings |
 | **Gemini CLI** | `gemini -p "/code-review"` | Quick quality analysis |
+| **GitHub Copilot** | `gh copilot` (interactive) | Conversational review, requires pushed branch |
 
 **Ask user preference** before running review if not specified.
 
@@ -34,6 +35,19 @@ gemini -p "/code-review"
 gemini
 # then type: /code-review
 ```
+
+### GitHub Copilot CLI
+```bash
+# Interactive mode - ask for code review
+gh copilot
+# then ask: "review my changes against main branch"
+
+# Or use new copilot CLI (npm package)
+npx @github/copilot
+# then ask for review
+```
+
+**Note:** GitHub Copilot CLI doesn't have a dedicated `review` subcommand. Use conversational prompts like "review my code changes" or "find bugs in my diff". For automated PR reviews, use GitHub web UI or assign Copilot as reviewer on the PR.
 
 **Wait for full output** before proceeding. The review is complete when you see the summary.
 
@@ -103,6 +117,9 @@ codex review --base main
 
 # Gemini
 gemini -p "/code-review"
+
+# GitHub Copilot (interactive)
+gh copilot  # then ask for review
 ```
 
 This is a new review cycle. Do NOT run this if:

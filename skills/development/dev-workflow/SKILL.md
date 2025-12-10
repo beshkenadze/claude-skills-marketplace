@@ -63,6 +63,7 @@ Project-specific test command (e.g., `xcodebuild test`, `npm test`).
 **Ask user which tool to use** if not specified:
 - **Codex CLI**: `codex review --base main`
 - **Gemini CLI**: `gemini -p "/code-review"`
+- **GitHub Copilot**: `gh copilot` (interactive, ask for review)
 
 Run **exactly once** per review cycle:
 ```bash
@@ -71,6 +72,9 @@ codex review --base main
 
 # OR Gemini (quick quality analysis)
 gemini -p "/code-review"
+
+# OR GitHub Copilot (interactive)
+gh copilot  # then ask: "review my changes against main"
 ```
 
 **IMPORTANT:** Wait for the full output. Do NOT run a second review unless you've made code changes to fix issues.
