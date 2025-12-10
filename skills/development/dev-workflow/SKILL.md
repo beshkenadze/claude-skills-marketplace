@@ -64,6 +64,7 @@ Project-specific test command (e.g., `xcodebuild test`, `npm test`).
 - **Codex CLI**: `codex review --base main`
 - **Gemini CLI**: `gemini -p "/code-review"`
 - **GitHub Copilot**: `gh copilot` (interactive, ask for review)
+- **OpenCode**: `opencode -p "review changes"` (provider-agnostic)
 
 Run **exactly once** per review cycle:
 ```bash
@@ -75,6 +76,9 @@ gemini -p "/code-review"
 
 # OR GitHub Copilot (interactive)
 gh copilot  # then ask: "review my changes against main"
+
+# OR OpenCode (works with any LLM provider)
+opencode -p "review my code changes against main branch"
 ```
 
 **IMPORTANT:** Wait for the full output. Do NOT run a second review unless you've made code changes to fix issues.

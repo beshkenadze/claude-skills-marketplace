@@ -7,6 +7,7 @@
 | **Codex CLI** | `codex review --base main` | Detailed P1-P4 priority findings |
 | **Gemini CLI** | `gemini -p "/code-review"` | Quick quality analysis |
 | **GitHub Copilot** | `gh copilot` (interactive) | Conversational review, requires pushed branch |
+| **OpenCode** | `opencode -p "review changes"` | Provider-agnostic, works with any LLM |
 
 **Ask user preference** before running review if not specified.
 
@@ -48,6 +49,21 @@ npx @github/copilot
 ```
 
 **Note:** GitHub Copilot CLI doesn't have a dedicated `review` subcommand. Use conversational prompts like "review my code changes" or "find bugs in my diff". For automated PR reviews, use GitHub web UI or assign Copilot as reviewer on the PR.
+
+### OpenCode (sst/opencode)
+```bash
+# Non-interactive mode with prompt
+opencode -p "review my code changes against main branch, find bugs and issues"
+
+# Interactive mode (TUI)
+opencode
+# then ask for review
+
+# With JSON output for parsing
+opencode -p "review changes" -f json
+```
+
+**Note:** OpenCode is provider-agnostic - works with Claude, OpenAI, Gemini, or local models. Configure your preferred provider with `opencode auth login`.
 
 **Wait for full output** before proceeding. The review is complete when you see the summary.
 
@@ -120,6 +136,9 @@ gemini -p "/code-review"
 
 # GitHub Copilot (interactive)
 gh copilot  # then ask for review
+
+# OpenCode
+opencode -p "review my changes against main"
 ```
 
 This is a new review cycle. Do NOT run this if:
