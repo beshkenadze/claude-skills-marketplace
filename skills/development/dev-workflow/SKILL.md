@@ -59,11 +59,22 @@ Add tests for new functionality. See [TESTING.md](TESTING.md) for testing patter
 Project-specific test command (e.g., `xcodebuild test`, `npm test`).
 
 ### 7. Codex Code Review
+
+Run **exactly once** per review cycle:
 ```bash
 codex review --base main
 ```
 
-**P1/P2 issues MUST be fixed before merge.** See [CODEX.md](CODEX.md) for handling findings.
+**IMPORTANT:** Wait for the full output. Do NOT run a second review unless you've made code changes to fix issues.
+
+**If P1/P2 issues found:**
+1. Fix all issues in code
+2. Commit fixes
+3. THEN run `codex review --base main` again (this is a new review cycle)
+
+**If no P1/P2 issues:** Proceed to commit.
+
+See [CODEX.md](CODEX.md) for handling specific findings.
 
 ### 8. Commit & Push
 ```bash

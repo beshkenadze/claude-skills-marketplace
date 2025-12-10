@@ -2,6 +2,8 @@
 
 ## Running Review
 
+**Run exactly ONCE per review cycle.** Do not run multiple reviews without code changes between them.
+
 ```bash
 # Review changes against main branch
 codex review --base main
@@ -12,6 +14,8 @@ codex review --base main "Focus on thread safety and memory management"
 # Review uncommitted changes
 codex review --uncommitted
 ```
+
+**Wait for full output** before proceeding. The review is complete when you see the summary.
 
 ## Priority Levels
 
@@ -71,9 +75,14 @@ try await localRef.doWork()
 
 ## Re-verification
 
-After fixing all P1/P2 issues:
+**Only after you've made code changes** to fix P1/P2 issues:
 ```bash
 codex review --base main
 ```
+
+This is a new review cycle. Do NOT run this if:
+- You haven't changed any code since the last review
+- The previous review is still running
+- You're just checking "if it worked"
 
 Only merge when output shows no critical issues.
