@@ -58,23 +58,31 @@ Add tests for new functionality. See [TESTING.md](TESTING.md) for testing patter
 ### 6. Run Tests
 Project-specific test command (e.g., `xcodebuild test`, `npm test`).
 
-### 7. Codex Code Review
+### 7. Code Review
+
+**Ask user which tool to use** if not specified:
+- **Codex CLI**: `codex review --base main`
+- **Gemini CLI**: `gemini -p "/code-review"`
 
 Run **exactly once** per review cycle:
 ```bash
+# Codex (detailed P1-P4 findings)
 codex review --base main
+
+# OR Gemini (quick quality analysis)
+gemini -p "/code-review"
 ```
 
 **IMPORTANT:** Wait for the full output. Do NOT run a second review unless you've made code changes to fix issues.
 
-**If P1/P2 issues found:**
+**If critical/high issues found:**
 1. Fix all issues in code
 2. Commit fixes
-3. THEN run `codex review --base main` again (this is a new review cycle)
+3. THEN run review again (this is a new review cycle)
 
-**If no P1/P2 issues:** Proceed to commit.
+**If no critical issues:** Proceed to commit.
 
-See [CODEX.md](CODEX.md) for handling specific findings.
+See [CODE-REVIEW.md](CODE-REVIEW.md) for handling specific findings.
 
 ### 8. Commit & Push
 ```bash

@@ -1,9 +1,19 @@
-# Codex Code Review Guide
+# Code Review Guide
+
+## Supported Tools
+
+| Tool | Command | Best For |
+|------|---------|----------|
+| **Codex CLI** | `codex review --base main` | Detailed P1-P4 priority findings |
+| **Gemini CLI** | `gemini -p "/code-review"` | Quick quality analysis |
+
+**Ask user preference** before running review if not specified.
 
 ## Running Review
 
 **Run exactly ONCE per review cycle.** Do not run multiple reviews without code changes between them.
 
+### Codex CLI
 ```bash
 # Review changes against main branch
 codex review --base main
@@ -15,39 +25,49 @@ codex review --base main "Focus on thread safety and memory management"
 codex review --uncommitted
 ```
 
+### Gemini CLI
+```bash
+# Non-interactive mode (recommended)
+gemini -p "/code-review"
+
+# Interactive mode
+gemini
+# then type: /code-review
+```
+
 **Wait for full output** before proceeding. The review is complete when you see the summary.
 
 ## Priority Levels
 
 | Priority | Severity | Action Required |
 |----------|----------|-----------------|
-| **P1** | Critical | MUST fix before merge |
-| **P2** | High | Should fix before merge |
-| **P3** | Medium | Fix if time permits |
-| **P4** | Low | Consider for future |
+| **P1** / Critical | Critical | MUST fix before merge |
+| **P2** / High | High | Should fix before merge |
+| **P3** / Medium | Medium | Fix if time permits |
+| **P4** / Low | Low | Consider for future |
 
 ## Handling Findings
 
-### P1 Issues (Critical)
+### Critical Issues (P1)
 1. **Do NOT merge** until resolved
 2. Read and understand the issue
 3. Implement fix in worktree
 4. Commit the fix
-5. Re-run `codex review --base main`
-6. Verify P1 is resolved
-7. Only proceed when no P1 issues remain
+5. Re-run review (see Re-verification below)
+6. Verify issue is resolved
+7. Only proceed when no critical issues remain
 
-### P2 Issues (High)
+### High Issues (P2)
 1. Should fix before merge
 2. Follow same process as P1
 3. May proceed with caution if fix is complex and risk is understood
 
-### P3/P4 Issues
+### Medium/Low Issues (P3/P4)
 1. Document for future improvement
 2. Create follow-up issue if warranted
 3. May proceed with merge
 
-## Common P1 Patterns
+## Common Critical Patterns
 
 ### Thread Safety
 - NSLock held across `await` calls
@@ -75,9 +95,14 @@ try await localRef.doWork()
 
 ## Re-verification
 
-**Only after you've made code changes** to fix P1/P2 issues:
+**Only after you've made code changes** to fix issues:
+
 ```bash
+# Codex
 codex review --base main
+
+# Gemini
+gemini -p "/code-review"
 ```
 
 This is a new review cycle. Do NOT run this if:
