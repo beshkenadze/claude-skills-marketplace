@@ -59,11 +59,23 @@ opencode -p "review my code changes against main branch, find bugs and issues"
 opencode
 # then ask for review
 
-# With JSON output for parsing
-opencode -p "review changes" -f json
+# Using custom command (if configured)
+opencode
+# then type: /review
 ```
 
-**Note:** OpenCode is provider-agnostic - works with Claude, OpenAI, Gemini, or local models. Configure your preferred provider with `opencode auth login`.
+**Setup custom /review command:** Create `.opencode/command/review.md`:
+```markdown
+Review the code changes against main branch. Check for:
+- Bugs and logic errors
+- Security vulnerabilities
+- Performance issues
+- Code style violations
+
+Use `git diff main` to see the changes.
+```
+
+**Note:** OpenCode is provider-agnostic - works with Claude, OpenAI, Gemini, or local models. Configure your preferred provider with `opencode auth login`. Built-in commands: `/init`, `/undo`, `/redo`, `/share`, `/help`.
 
 **Wait for full output** before proceeding. The review is complete when you see the summary.
 
