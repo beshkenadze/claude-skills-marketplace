@@ -114,6 +114,36 @@ Use `git diff main` to see the changes.
 
 **Note:** OpenCode is provider-agnostic - works with Claude, OpenAI, Gemini, or local models. Configure your preferred provider with `opencode auth login`. Built-in commands: `/init`, `/undo`, `/redo`, `/share`, `/help`.
 
+**Recommended: Add context7 MCP** for up-to-date library documentation during review.
+
+Add to `opencode.json`:
+```json
+{
+  "mcp": {
+    "context7": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp"],
+      "enabled": true
+    }
+  }
+}
+```
+
+Or use remote endpoint (no local install):
+```json
+{
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    }
+  }
+}
+```
+
+Then reference in review prompts: `"use context7 to check API usage against latest docs"`
+
 **Wait for full output** before proceeding. The review is complete when you see the summary.
 
 ## Priority Levels
