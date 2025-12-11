@@ -1,5 +1,36 @@
 # Code Review Guide
 
+## Context for Review
+
+**Before running code review, provide context documents** to help the reviewer understand intent:
+
+| Document | Purpose | Location |
+|----------|---------|----------|
+| **SPEC.md** | Requirements, acceptance criteria | Project root or `docs/` |
+| **DESIGN.md** | Architecture, data flow, API contracts | Project root or `docs/` |
+| **Issue description** | User story, bug report | Issue tracker |
+
+### Providing Context to Review Tools
+
+```bash
+# Codex - reference spec in focus prompt
+codex review --base main "Review against SPEC.md requirements"
+
+# Gemini - include context in prompt
+gemini -p "Read SPEC.md and DESIGN.md first, then /code-review"
+
+# OpenCode - reference docs in prompt
+opencode -p "Review changes against SPEC.md requirements and DESIGN.md architecture"
+```
+
+### Minimum Context Checklist
+
+Before review, ensure reviewer has access to:
+- [ ] **What**: Feature/bug description from issue
+- [ ] **Why**: Business requirement or user need
+- [ ] **How**: Expected behavior and edge cases
+- [ ] **Constraints**: Performance, security, compatibility requirements
+
 ## Supported Tools
 
 | Tool | Command | Best For |
@@ -66,7 +97,13 @@ opencode
 
 **Setup custom /review command:** Create `.opencode/command/review.md`:
 ```markdown
-Review the code changes against main branch. Check for:
+First, read these context documents if they exist:
+- SPEC.md or docs/SPEC.md (requirements)
+- DESIGN.md or docs/DESIGN.md (architecture)
+
+Then review the code changes against main branch. Check for:
+- Compliance with SPEC.md requirements
+- Alignment with DESIGN.md architecture
 - Bugs and logic errors
 - Security vulnerabilities
 - Performance issues
