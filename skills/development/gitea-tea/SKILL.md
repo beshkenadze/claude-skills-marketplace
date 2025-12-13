@@ -185,6 +185,12 @@ tea pulls merge 20 --style squash --message "feat: implement auth"
 
 # Merge PR (rebase)
 tea pulls merge 20 --style rebase
+
+# Close PR
+tea pulls close 20
+
+# Reopen PR
+tea pulls reopen 20
 ```
 
 ## Releases
@@ -249,6 +255,7 @@ tea releases delete v1.0.0-beta --confirm
 # List labels
 tea labels list
 tea labels list --repo owner/project
+tea labels list --save  # Save labels to file
 
 # Create label
 tea labels create bug \
@@ -262,6 +269,9 @@ tea labels create enhancement \
 # Update label
 tea labels update bug --color "#cc0000"
 tea labels update old-name --name new-name
+
+# Delete label
+tea labels delete bug
 ```
 
 ## Milestones
@@ -270,14 +280,32 @@ tea labels update old-name --name new-name
 # List milestones
 tea milestones list
 tea milestones list --state open
+tea milestones list --state closed
 
 # View milestone issues
-tea milestone issues "v1.0.0"
+tea milestones issues "v1.0.0"
+tea milestones issues "v1.0.0" --kind pull  # Only PRs
+tea milestones issues "v1.0.0" --state all
+
+# Add issue/PR to milestone
+tea milestones issues add "v1.0.0" 42
+
+# Remove issue/PR from milestone
+tea milestones issues remove "v1.0.0" 42
 
 # Create milestone
 tea milestones create "v2.0.0" \
   --description "Major version release" \
   --deadline "2024-12-31"
+
+# Close milestone
+tea milestones close "v1.0.0"
+
+# Reopen milestone
+tea milestones reopen "v1.0.0"
+
+# Delete milestone
+tea milestones delete "v0.9.0"
 ```
 
 ## Repositories
@@ -286,13 +314,44 @@ tea milestones create "v2.0.0" \
 # List repos
 tea repos list
 tea repos list --org myorg
+tea repos list --watched  # Watched repos
+tea repos list --starred  # Starred repos
+tea repos list --type fork  # Filter: fork, mirror, source
 tea repos list --output yaml
 
 # Search repos
 tea repos search "keyword" --login gitea.com
 
-# Clone repo
+# View repo details
+tea repos owner/repo
+
+# Create repo
+tea repos create --name myrepo --private --init
+tea repos create \
+  --name myrepo \
+  --owner myorg \
+  --description "My project" \
+  --private \
+  --init \
+  --gitignores Go \
+  --license MIT
+
+# Create from template
+tea repos create-from-template \
+  --template owner/template-repo \
+  --name new-repo
+
+# Fork repo
+tea repos fork --repo owner/repo
+tea repos fork --repo owner/repo --owner myorg
+
+# Delete repo
+tea repos delete owner/repo
+
+# Clone repo (without git)
 tea clone owner/repo
+tea clone owner/repo ./target-dir
+tea clone gitea.com/owner/repo  # With host
 ```
 
 ## Time Tracking
@@ -315,8 +374,79 @@ tea times delete 42 --id 123
 ## Notifications
 
 ```bash
-# View notifications
-tea notifications --mine
+# List notifications (current repo)
+tea notifications list
+
+# List all notifications
+tea notifications list --mine
+
+# Filter by type
+tea notifications list --types issue,pull
+
+# Filter by state
+tea notifications list --states unread,pinned
+
+# Mark as read
+tea notifications read  # All filtered
+tea notifications read 123  # Specific ID
+
+# Mark as unread
+tea notifications unread 123
+
+# Pin/unpin
+tea notifications pin 123
+tea notifications unpin 123
+```
+
+## Organizations
+
+```bash
+# List organizations
+tea organizations list
+
+# View organization details
+tea organizations myorg
+
+# Create organization
+tea organizations create myorg
+
+# Delete organization
+tea organizations delete myorg
+```
+
+## Branches
+
+```bash
+# List branches
+tea branches list
+tea branches list --output json
+
+# View branch details
+tea branches main
+
+# Protect branch
+tea branches protect main
+
+# Unprotect branch
+tea branches unprotect main
+```
+
+## Comments
+
+```bash
+# Add comment to issue or PR
+tea comment 42 "This is my comment"
+
+# From specific repo
+tea comment 42 "Comment text" --repo owner/repo
+```
+
+## Admin (requires admin access)
+
+```bash
+# List users
+tea admin users list
+tea admin users list --output json
 ```
 
 ## Non-Interactive Mode (AI Agents)
