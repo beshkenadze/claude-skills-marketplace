@@ -83,6 +83,13 @@
       "source": "./skills/development/research-guide",
       "category": "development",
       "version": "1.0.0"
+    },
+    {
+      "name": "gitea-tea",
+      "description": "Gitea CLI (tea) for managing issues, pull requests, releases, and repositories. Use when user mentions tea, gitea cli, or needs to interact with Gitea from terminal.",
+      "source": "./skills/development/gitea-tea",
+      "category": "development",
+      "version": "1.0.0"
     }
   ]
 }
