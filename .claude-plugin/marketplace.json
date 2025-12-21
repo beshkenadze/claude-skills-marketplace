@@ -90,6 +90,13 @@
       "source": "./skills/development/gitea-tea",
       "category": "development",
       "version": "1.0.0"
+    },
+    {
+      "name": "verify-known-issues",
+      "description": "Triggers when Claude is about to claim something is a 'known issue' with any library, tool, or platform. Requires web search verification and sub-agent consensus before making such claims. Prevents hallucinated bug reports.",
+      "source": "./skills/meta/verify-known-issues",
+      "category": "meta",
+      "version": "1.0.0"
     }
   ]
 }
