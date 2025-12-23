@@ -1,6 +1,6 @@
 ---
 name: python-uv
-description: Manage Python projects with uv. Use when creating Python projects, managing dependencies, running scripts, or installing Python versions.
+description: Manage Python with uv instead of pip/virtualenv. Use when running Python scripts, installing packages, or creating virtual environments.
 version: 1.0.0
 ---
 
