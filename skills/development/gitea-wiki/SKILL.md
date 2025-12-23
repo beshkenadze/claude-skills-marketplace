@@ -1,6 +1,6 @@
 ---
 name: gitea-wiki
-description: Manage Gitea wiki pages efficiently. Use when working with wiki content, creating documentation, or updating wiki pages. Handles base64 encoding/decoding via helper scripts.
+description: Manage Gitea wiki pages. Use when working with wiki content, creating documentation, or updating wiki pages.
 version: 1.0.0
 ---
 

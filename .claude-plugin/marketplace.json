@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "skill-creator",
-      "description": "Create new Claude Agent Skills through interactive guidance. Use when asked to create a skill, build a skill, make a new skill, or help with skill development.",
+      "description": "Create new Claude Agent Skills. Use when asked to create, build, or develop a skill.",
       "source": "./skills/meta/skill-creator",
       "category": "meta",
       "version": "1.0.0"
@@ -44,28 +44,28 @@
     },
     {
       "name": "swiftui-developer",
-      "description": "Develop SwiftUI applications for iOS and macOS following Apple Human Interface Guidelines, modern architecture patterns (MVVM, @Observable), and performance best practices. Use when writing SwiftUI views, managing state, or building Apple platform UIs.",
+      "description": "Develop SwiftUI applications for iOS/macOS. Use when writing SwiftUI views, managing state, or building Apple platform UIs.",
       "source": "./skills/development/swiftui-developer",
       "category": "development",
       "version": "1.0.0"
     },
     {
       "name": "wget-reader",
-      "description": "Read and fetch data from URLs using wget. Use when asked to download content, fetch remote files, or read data from web URLs.",
+      "description": "Fetch data from URLs. Use when asked to download content, fetch remote files, or read web data.",
       "source": "./skills/utility/wget-reader",
       "category": "utility",
       "version": "1.0.0"
     },
     {
       "name": "gitea-wiki",
-      "description": "Manage Gitea wiki pages efficiently. Use when working with wiki content, creating documentation, or updating wiki pages. Handles base64 encoding/decoding via helper scripts.",
+      "description": "Manage Gitea wiki pages. Use when working with wiki content, creating documentation, or updating wiki pages.",
       "source": "./skills/development/gitea-wiki",
       "category": "development",
       "version": "1.0.0"
     },
     {
       "name": "dev-workflow",
-      "description": "Orchestrates full development workflow with git worktrees, Codex CLI code review, and issue tracking. Use when implementing features across issues, starting structured development, or when user mentions workflow, implement issues, or needs PR-based development with code review.",
+      "description": "Orchestrate full development workflow. Use when implementing features, starting structured development, or user mentions 'workflow' or 'implement issues'.",
       "source": "./skills/development/dev-workflow",
       "category": "development",
       "version": "1.0.0"
@@ -79,28 +79,28 @@
     },
     {
       "name": "research-guide",
-      "description": "Research best practices, guides, and libraries for any topic. Use when needing documentation, recommendations, implementation guidance, or library comparisons. Outputs detailed reports based on project context.",
+      "description": "Research best practices, guides, and libraries. Use when needing documentation, recommendations, implementation guidance, or library comparisons.",
       "source": "./skills/development/research-guide",
       "category": "development",
       "version": "1.0.0"
     },
     {
       "name": "gitea-tea",
-      "description": "Gitea CLI (tea) for managing issues, pull requests, releases, and repositories. Use when user mentions tea, gitea cli, or needs to interact with Gitea from terminal.",
+      "description": "Manage Gitea via CLI. Use when user mentions 'tea', 'gitea cli', or needs terminal-based Gitea operations.",
       "source": "./skills/development/gitea-tea",
       "category": "development",
       "version": "1.0.0"
     },
     {
       "name": "verify-known-issues",
-      "description": "Triggers when Claude is about to claim something is a 'known issue' with any library, tool, or platform. Requires web search verification and sub-agent consensus before making such claims. Prevents hallucinated bug reports.",
+      "description": "Verify claims about known issues in libraries or tools. Use when about to state something is a 'known issue', 'known bug', or 'known limitation'.",
       "source": "./skills/meta/verify-known-issues",
       "category": "meta",
       "version": "1.0.0"
     },
     {
       "name": "python-uv",
-      "description": "Manage Python projects with uv - the ultra-fast package manager. Use when creating Python projects, managing dependencies, running scripts, or installing Python versions. Replaces pip, poetry, pyenv, pipx.",
+      "description": "Manage Python projects with uv. Use when creating Python projects, managing dependencies, running scripts, or installing Python versions.",
       "source": "./skills/development/python-uv",
       "category": "development",
       "version": "1.0.0"

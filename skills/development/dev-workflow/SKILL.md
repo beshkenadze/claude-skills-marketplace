@@ -1,6 +1,6 @@
 ---
 name: dev-workflow
-description: Orchestrates full development workflow with git worktrees and Codex CLI code review. Use when implementing features across issues, starting structured development, or when user mentions "workflow", "implement issues", or needs PR-based development with code review.
+description: Orchestrate full development workflow. Use when implementing features, starting structured development, or user mentions "workflow" or "implement issues".
 ---
 
 # Development Workflow

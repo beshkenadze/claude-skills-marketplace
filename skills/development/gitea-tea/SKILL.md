@@ -1,6 +1,6 @@
 ---
 name: gitea-tea
-description: Gitea CLI (tea) for managing issues, pull requests, releases, and repositories. Use when user mentions "tea", "gitea cli", or needs to interact with Gitea from terminal.
+description: Manage Gitea via CLI. Use when user mentions "tea", "gitea cli", or needs terminal-based Gitea operations.
 version: 1.0.0
 ---
 

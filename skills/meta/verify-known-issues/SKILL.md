@@ -1,6 +1,6 @@
 ---
 name: verify-known-issues
-description: Triggers when Claude is about to claim something is a "known issue" - requires web search verification and sub-agent consensus before making such claims
+description: Verify claims about known issues in libraries or tools. Use when about to state something is a "known issue", "known bug", or "known limitation".
 version: 1.0.0
 ---
 

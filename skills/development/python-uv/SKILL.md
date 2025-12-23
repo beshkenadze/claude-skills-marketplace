@@ -1,6 +1,6 @@
 ---
 name: python-uv
-description: Manage Python projects with uv - the ultra-fast package manager. Use when creating Python projects, managing dependencies, running scripts, or installing Python versions. Replaces pip, poetry, pyenv, pipx.
+description: Manage Python projects with uv. Use when creating Python projects, managing dependencies, running scripts, or installing Python versions.
 version: 1.0.0
 ---
 

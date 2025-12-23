@@ -1,6 +1,6 @@
 ---
 name: swiftui-developer
-description: Develop SwiftUI applications for iOS and macOS following Apple Human Interface Guidelines, modern architecture patterns (MVVM, @Observable), and performance best practices. Use when writing SwiftUI views, managing state, or building Apple platform UIs.
+description: Develop SwiftUI applications for iOS/macOS. Use when writing SwiftUI views, managing state, or building Apple platform UIs.
 version: 1.0.0
 ---
 

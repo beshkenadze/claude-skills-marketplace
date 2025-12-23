@@ -1,6 +1,6 @@
 ---
 name: skill-creator
-description: Create new Claude Agent Skills through interactive guidance. Use when asked to create a skill, build a skill, make a new skill, or help with skill development.
+description: Create new Claude Agent Skills. Use when asked to create, build, or develop a skill.
 version: 1.0.0
 ---
 

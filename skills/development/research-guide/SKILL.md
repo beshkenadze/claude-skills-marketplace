@@ -1,6 +1,6 @@
 ---
 name: research-guide
-description: Research best practices, guides, and libraries for any topic. Use when needing documentation, recommendations, implementation guidance, or library comparisons. Outputs detailed reports based on project context.
+description: Research best practices, guides, and libraries. Use when needing documentation, recommendations, implementation guidance, or library comparisons.
 version: 1.0.0
 ---
 

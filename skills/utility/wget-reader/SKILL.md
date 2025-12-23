@@ -1,6 +1,6 @@
 ---
 name: wget-reader
-description: Read and fetch data from URLs using wget. Use when asked to download content, fetch remote files, or read data from web URLs.
+description: Fetch data from URLs. Use when asked to download content, fetch remote files, or read web data.
 version: 1.0.0
 ---
 
