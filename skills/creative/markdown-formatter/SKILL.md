@@ -67,7 +67,15 @@ Retrieves a user by their unique identifier.
 
 ## Guidelines
 
+### Do
 - Keep line length under 100 characters
 - Use blank lines to separate sections
 - Prefer ATX-style headings (`#`) over Setext
 - Use reference-style links for repeated URLs
+- Include language identifier in fenced code blocks
+
+### Don't
+- Use more than 3 heading levels unless necessary
+- Mix heading styles in same document
+- Create deeply nested lists (max 2 levels)
+- Use HTML tags when Markdown suffices

@@ -19,7 +19,7 @@ This skill activates when Claude is about to say ANY of these patterns:
 - "This is a common issue with..."
 - "This is a recognized bug..."
 
-## Why This Exists
+## Overview
 
 Claude may hallucinate "known issues" that don't exist. Claims about external software bugs, library limitations, or platform issues MUST be verified before stating them as fact.
 

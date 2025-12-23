@@ -5,7 +5,9 @@ description: Orchestrate full development workflow. Use when implementing featur
 
 # Development Workflow
 
-Complete workflow: Issue → Branch → Worktree → Implement → Test → Codex Review → PR → Merge → Close
+## Overview
+
+Orchestrates complete feature development from issue to merge: Issue → Branch → Worktree → Implement → Test → Review → PR → Merge → Close.
 
 ## Prerequisites
 
@@ -152,10 +154,39 @@ For multiple independent issues, see [PARALLEL.md](PARALLEL.md).
 
 See [ERRORS.md](ERRORS.md) for handling build failures, Codex P1 issues, and merge conflicts.
 
-## Output Format
+## Examples
 
-After completion, report:
-- Issues processed
-- PRs created/merged
-- Issues closed
-- Blockers (if any)
+### Example: Implement Feature from Issue
+
+**Input:**
+"Implement issue #42 - Add user authentication"
+
+**Process:**
+1. Get issue details via MCP
+2. Create branch `feature/42-user-auth`
+3. Create worktree
+4. Implement authentication feature
+5. Write tests
+6. Run code review
+7. Create PR and merge
+
+**Output:**
+```
+✅ Issue #42 implemented
+✅ PR #15 created and merged
+✅ Issue #42 closed
+```
+
+## Guidelines
+
+### Do
+- Confirm repository owner/name before starting
+- Create worktree for isolation
+- Run code review before PR
+- Close issue after merge
+
+### Don't
+- Skip the code review step
+- Work directly on main branch
+- Leave worktrees after merge
+- Forget to push before creating PR

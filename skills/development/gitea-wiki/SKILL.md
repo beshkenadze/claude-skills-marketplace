@@ -147,12 +147,19 @@ Step 5: Call MCP update
         )
 ```
 
-## Key Rules
+## Guidelines
 
-1. **NEVER** include raw base64 content in LLM responses - decode via Bash
-2. **ALWAYS** use temp files (`/tmp/wiki-*.md`) for content manipulation
-3. **ALWAYS** use `tr -d '\n'` when encoding - API requires no line breaks
-4. Clean up temp files after operations
+### Do
+- Use temp files (`/tmp/wiki-*.md`) for content manipulation
+- Use `tr -d '\n'` when encoding - API requires no line breaks
+- Clean up temp files after operations
+- Decode content via Bash before reading
+
+### Don't
+- Include raw base64 content in LLM responses
+- Skip the decode step when reading wiki pages
+- Forget to encode content before creating/updating pages
+- Leave temp files after operations complete
 
 ## Examples
 

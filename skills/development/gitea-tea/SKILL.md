@@ -6,7 +6,16 @@ version: 1.0.0
 
 # Gitea CLI (tea)
 
+## Overview
+
 Official command-line interface for Gitea. Manage issues, PRs, releases, and repos from terminal.
+
+## Instructions
+
+1. **Verify authentication**: Run `tea whoami` to confirm login
+2. **Check context**: Run in git repo for auto-detection, or use `--repo owner/repo`
+3. **Use non-interactive mode**: Always use `--output` flag and provide all arguments
+4. **Choose operation**: See command reference sections below
 
 ## Installation
 
@@ -472,18 +481,23 @@ tea login default <login-name>
 
 **Always prefer explicit flags over interactive prompts.**
 
-## Tips
+## Guidelines
 
-- **Context-aware**: Runs in git repo context, uses remote info automatically
-- **Multiple instances**: Use `--login gitea.example.com` for cross-instance ops
-- **Output formats**: Use `--output yaml|json|csv|simple` for scripting
-- **Shell completions**: `tea shellcompletion bash|zsh|fish`
-- **Open in browser**: `tea open 42` opens issue/PR in default browser
-- **Non-interactive**: Always use `--output` flag and provide all args
+### Do
+- Use `--output simple` or `--output json` for non-interactive mode
+- Provide all required arguments upfront to avoid prompts
+- Run `tea whoami` to verify authentication before operations
+- Use `tea open <number>` to quickly view in browser
 
-## Common Workflows
+### Don't
+- Use interactive commands in AI agent context (no TTY)
+- Forget `--repo owner/repo` when outside git repository
+- Skip `--yes` flag for destructive operations in scripts
+- Use `tea login add` interactively (configure beforehand)
 
-### Feature Branch → PR
+## Examples
+
+### Example: Feature Branch → PR
 ```bash
 git checkout -b feature/new-feature
 # ... make changes ...
@@ -492,7 +506,7 @@ git push -u origin feature/new-feature
 tea pulls create --title "Add new feature" --base main --head feature/new-feature
 ```
 
-### Review & Merge PR
+### Example: Review & Merge PR
 ```bash
 tea pulls checkout 20
 # ... review code ...
@@ -500,7 +514,7 @@ tea pulls approve 20 --comment "LGTM!"
 tea pulls merge 20 --style squash
 ```
 
-### Create Release with Assets
+### Example: Create Release with Assets
 ```bash
 git tag v1.0.0
 git push origin v1.0.0

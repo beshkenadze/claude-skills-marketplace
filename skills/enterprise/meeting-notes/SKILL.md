@@ -64,7 +64,15 @@ Structured notes following the format above with clear attribution
 
 ## Guidelines
 
-- Keep summaries concise
-- Always attribute decisions to specific people
-- Action items must have owners and deadlines
+### Do
+- Keep summaries concise (2-3 sentences max)
+- Attribute decisions to specific people
+- Include owners and deadlines for all action items
 - Flag unclear items for clarification
+- Use consistent formatting throughout
+
+### Don't
+- Include verbatim transcript in notes
+- Leave action items without owners
+- Skip the summary section
+- Omit attendee names from notes

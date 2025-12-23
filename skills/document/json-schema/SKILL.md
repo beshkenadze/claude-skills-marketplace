@@ -82,7 +82,15 @@ When generating JSON Schema:
 
 ## Guidelines
 
+### Do
 - Always include `$schema` declaration
 - Add descriptions for all properties
 - Use `additionalProperties: false` for strict validation
 - Prefer specific formats over loose patterns
+- Use `required` array for mandatory fields
+
+### Don't
+- Use overly permissive types (avoid `{}` or `true`)
+- Skip validation constraints on user input
+- Mix draft versions in same schema
+- Forget to handle nullable fields explicitly

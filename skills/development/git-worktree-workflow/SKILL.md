@@ -102,13 +102,20 @@ Step 5: Verify cleanup
         git worktree list
 ```
 
-## Key Rules
+## Guidelines
 
-1. **ALWAYS** symlink `.claude/` - never copy
-2. **ALWAYS** use relative paths for symlinks (`../RepoName/.claude`)
-3. **ALWAYS** cleanup after PR merge (remove worktree + delete branch)
-4. Work in worktree using full paths from main repo
-5. Return to main repo before cleanup operations
+### Do
+- Symlink `.claude/` directory - never copy
+- Use relative paths for symlinks (`../RepoName/.claude`)
+- Cleanup after PR merge (remove worktree + delete branch)
+- Work in worktree using full paths from main repo
+- Return to main repo before cleanup operations
+
+### Don't
+- Copy `.claude/` directory (breaks updates)
+- Use absolute paths for symlinks
+- Leave worktrees after merge (clutters disk)
+- Delete worktree before pushing changes
 
 ## Examples
 

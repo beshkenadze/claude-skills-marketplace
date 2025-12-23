@@ -72,9 +72,14 @@ wget --timeout=30 --tries=3 -O "output.txt" "<URL>"
 
 ## Guidelines
 
+### Do
 - Always quote URLs to handle special characters
 - Use `-q` flag to suppress progress bars in scripts
-- For large files, consider adding `--show-progress` for user feedback
-- Respect robots.txt and rate limits when fetching multiple URLs
-- Use `--no-check-certificate` only when necessary (self-signed certs)
-- For authentication, use `--user` and `--password` or `--header="Authorization: Bearer <token>"`
+- Add `--timeout` for unreliable endpoints
+- Respect robots.txt and rate limits
+
+### Don't
+- Use `--no-check-certificate` unless necessary
+- Fetch URLs without validating format first
+- Ignore HTTP error codes in responses
+- Store credentials in command history

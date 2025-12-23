@@ -67,7 +67,15 @@ When reviewing code:
 
 ## Guidelines
 
+### Do
 - Be specific with line numbers when possible
 - Provide working code examples for fixes
 - Prioritize actionable feedback
 - Acknowledge good patterns when found
+- Read entire file before commenting
+
+### Don't
+- Nitpick style issues (leave to linters)
+- Block on subjective preferences
+- Review generated/vendored code
+- Make vague suggestions without examples
