@@ -104,6 +104,13 @@
       "source": "./skills/development/python-uv",
       "category": "development",
       "version": "1.0.0"
+    },
+    {
+      "name": "safe-rm",
+      "description": "Use safe-rm script instead of rm -rf. Prevents accidental deletion of protected system, config, and project paths.",
+      "source": "./skills/utility/safe-rm",
+      "category": "utility",
+      "version": "1.0.0"
     }
   ]
 }
