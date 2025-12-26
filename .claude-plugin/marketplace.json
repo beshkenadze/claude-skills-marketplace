@@ -111,6 +111,34 @@
       "source": "./skills/utility/safe-rm",
       "category": "utility",
       "version": "1.0.0"
+    },
+    {
+      "name": "ios-design-workflow",
+      "description": "Orchestrates complete iOS app design workflow from idea to implementation. Use when starting a new iOS feature, planning iOS app architecture, or need end-to-end iOS design process.",
+      "source": "./skills/development/ios-design-workflow",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ios-swiftui-generator",
+      "description": "Generate SwiftUI components following Apple HIG. Use when creating iOS UI components, building SwiftUI views, or need code scaffolding for iOS interfaces.",
+      "source": "./skills/development/ios-swiftui-generator",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ios-design-review",
+      "description": "Review iOS code for Apple HIG compliance. Use when validating SwiftUI/UIKit code, checking accessibility, or auditing iOS design implementation.",
+      "source": "./skills/development/ios-design-review",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ios-hig-reference",
+      "description": "Apple Human Interface Guidelines quick reference. Use when needing iOS design guidelines, HIG rules, or Apple design best practices.",
+      "source": "./skills/development/ios-hig-reference",
+      "category": "development",
+      "version": "1.0.0"
     }
   ]
 }
