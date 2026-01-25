@@ -139,6 +139,27 @@
       "source": "./skills/development/ios-hig-reference",
       "category": "development",
       "version": "1.0.0"
+    },
+    {
+      "name": "zenstack",
+      "description": "ZenStack access policies and enhanced Prisma ORM. Use when defining access control rules (@@allow/@@deny), integrating with tRPC, setting up auth(), or working with ZModel schemas.",
+      "source": "./skills/development/zenstack",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "biome",
+      "description": "Fast linting/formatting for TypeScript/React. Use when setting up linter, migrating from ESLint/Prettier, or running code quality checks.",
+      "source": "./skills/development/biome",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "typescript-advanced-types",
+      "description": "Advanced TypeScript types (generics, conditionals, mapped, utilities). Use when building type-safe libraries or implementing complex type logic.",
+      "source": "./skills/development/typescript-advanced-types",
+      "category": "development",
+      "version": "1.0.0"
     }
   ]
 }

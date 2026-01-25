@@ -1,0 +1,59 @@
+{
+  "name": "team-orchestrator",
+  "description": "Multi-agent development team orchestrator",
+  "version": "1.0.0",
+  "agents": [
+    {
+      "id": "pm",
+      "config": "./pm/agent.json",
+      "isOrchestrator": true
+    },
+    {
+      "id": "frontend",
+      "config": "./frontend/agent.json"
+    },
+    {
+      "id": "backend",
+      "config": "./backend/agent.json"
+    },
+    {
+      "id": "devops",
+      "config": "./devops/agent.json"
+    },
+    {
+      "id": "qa",
+      "config": "./qa/agent.json"
+    }
+  ],
+  "workflow": {
+    "issueCreated": {
+      "handler": "pm",
+      "actions": ["decompose", "assign", "createSubtasks"]
+    },
+    "prCreated": {
+      "handler": "qa",
+      "actions": ["review", "runTests", "checkCoverage"]
+    },
+    "prApproved": {
+      "handler": "pm",
+      "actions": ["merge", "closeIssue", "updateBoard"]
+    }
+  },
+  "labelRouting": {
+    "frontend": "frontend",
+    "ui": "frontend",
+    "react": "frontend",
+    "nextjs": "frontend",
+    "backend": "backend",
+    "api": "backend",
+    "database": "backend",
+    "auth": "backend",
+    "devops": "devops",
+    "ci": "devops",
+    "docker": "devops",
+    "infra": "devops",
+    "qa": "qa",
+    "testing": "qa",
+    "bug": "qa"
+  }
+}
