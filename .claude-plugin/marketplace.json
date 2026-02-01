@@ -160,6 +160,13 @@
       "source": "./skills/development/typescript-advanced-types",
       "category": "development",
       "version": "1.0.0"
+    },
+    {
+      "name": "codex-code-review",
+      "description": "Use Codex CLI for AI-powered code review. Use when wanting 'codex review', 'review with codex', AI code review before PR/merge, or CI/CD code review integration.",
+      "source": "./skills/development/codex-code-review",
+      "category": "development",
+      "version": "1.0.0"
     }
   ]
 }
