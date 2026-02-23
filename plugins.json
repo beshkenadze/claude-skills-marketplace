@@ -13,7 +13,8 @@
         "skills/development/dev-workflow",
         "skills/development/git-worktree-workflow",
         "skills/enterprise/meeting-notes",
-        "skills/document/json-schema"
+        "skills/document/json-schema",
+        "skills/enterprise/ada-compliance"
       ]
     }
   ]
