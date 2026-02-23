@@ -167,6 +167,20 @@
       "source": "./skills/development/codex-code-review",
       "category": "development",
       "version": "1.0.0"
+    },
+    {
+      "name": "ralphex",
+      "description": "Autonomous plan execution with Claude Code. Use when creating implementation plans, running ralphex CLI, or needing AI-driven autonomous development workflow.",
+      "source": "./skills/development/ralphex",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ada-compliance",
+      "description": "Use when reviewing accessibility of websites, apps, or facilities, conducting WCAG audits, preparing for ADA Title II/III deadlines, or checking digital/physical accessibility requirements.",
+      "source": "./skills/enterprise/ada-compliance",
+      "category": "enterprise",
+      "version": "1.0.0"
     }
   ]
 }

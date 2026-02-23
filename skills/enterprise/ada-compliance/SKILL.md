@@ -1,7 +1,6 @@
 ---
 name: ada-compliance
-description: Audit websites, apps, and facilities for ADA compliance. Use when reviewing accessibility, conducting WCAG audits, preparing for ADA deadlines, or checking digital/physical accessibility requirements.
-version: 1.0.0
+description: Use when reviewing accessibility of websites, apps, or facilities, conducting WCAG audits, preparing for ADA Title II/III deadlines, or checking digital/physical accessibility requirements.
 ---
 
 # ADA Compliance
@@ -33,7 +32,7 @@ When conducting an ADA compliance review:
 
 5. **Provide remediation guidance** — concrete fixes with code examples for digital, specification references for physical
 
-6. **Note deadline context** — Title II: April 24, 2026 (50K+ pop) / April 26, 2027 (under 50K)
+6. **Note deadline context** — Title II per DOJ 2024 final rule: April 24, 2026 (50K+ pop) / April 26, 2027 (under 50K and special district governments)
 
 ## Digital Accessibility Checklist
 
@@ -102,6 +101,44 @@ When conducting an ADA compliance review:
 | 4.1.2 Name, Role, Value | All UI components have accessible name, role, and state | A |
 | 4.1.3 Status Messages | Status messages conveyed to assistive tech without receiving focus | AA |
 
+### PDF Accessibility
+
+PDFs are among the most common barriers in government digital content. Remediation checklist:
+
+- **Tagged PDF** — document must have a tag tree reflecting logical reading order (headings, paragraphs, lists, tables)
+- **Text-based** — no image-only scans; use OCR if digitizing paper documents
+- **Reading order** — tags must match visual layout order for screen readers
+- **Alt text** — all meaningful images within the PDF must have alternative text
+- **Form fields** — interactive forms must have labels, tab order, and tooltips
+- **Table structure** — tables must have header cells (`<TH>`) properly associated with data cells
+- **Bookmarks** — documents over 9 pages should include bookmarks for navigation
+- **Language** — document language must be set in metadata
+- **Color contrast** — same 4.5:1 ratio applies within PDF content
+
+Tools: Adobe Acrobat Pro (Accessibility Checker), PAC 2024, CommonLook PDF Validator.
+
+### WCAG 2.2 New Criteria
+
+WCAG 2.2 (October 2023) adds the following criteria beyond WCAG 2.1. The DOJ rule references WCAG 2.1 AA as the legal minimum, but 2.2 is recommended for future-proofing.
+
+**New Level A:**
+
+| Criterion | Requirement | Level |
+|---|---|---|
+| 3.2.6 Consistent Help | Help mechanisms (chat, phone, FAQ) appear in same relative location across pages | A |
+
+**New Level AA:**
+
+| Criterion | Requirement | Level |
+|---|---|---|
+| 2.4.11 Focus Not Obscured (Minimum) | Focused component is at least partially visible, not hidden by author-created content | AA |
+| 2.5.7 Dragging Movements | Drag actions have single-pointer alternatives (click-based) | AA |
+| 2.5.8 Target Size (Minimum) | Interactive targets are at least 24x24 CSS pixels, or have sufficient spacing | AA |
+| 3.3.7 Redundant Entry | Information previously entered is auto-populated or available for selection; no re-entry required | AA |
+| 3.3.8 Accessible Authentication (Minimum) | No cognitive function test (e.g. memorizing password) required unless alternative or assistance is provided | AA |
+
+**Removed in WCAG 2.2:** 4.1.1 Parsing (obsolete — modern browsers and assistive tech no longer depend on strict HTML parsing).
+
 ## Physical Facility Checklist
 
 ### Parking
@@ -160,6 +197,17 @@ When conducting an ADA compliance review:
 ### Who Must Comply
 - **Title II**: State and local governments (all sizes, no exemptions)
 - **Title III**: Businesses open to the public (15+ employees). No formal technical standard yet, but courts and DOJ reference WCAG 2.1 AA
+- **Section 508** (Rehabilitation Act): Federal agencies and contractors — all electronic and information technology must be accessible. Uses WCAG 2.0 AA as technical standard (ICT Refresh, 2017). Applies to websites, documents, software, and hardware procured or developed by the federal government
+
+### Deadlines (DOJ 2024 Final Rule, Title II)
+
+| Entity | Compliance date |
+|---|---|
+| State/local governments with 50,000+ residents | April 24, 2026 |
+| State/local governments with 0–49,999 residents | April 26, 2027 |
+| Special district governments | April 26, 2027 |
+
+Source: [DOJ Final Rule on ADA Title II Web Accessibility](https://www.ada.gov/resources/title-ii-rule/)
 
 ### Penalties
 - First Title III violation: up to $75,000
@@ -220,7 +268,7 @@ When conducting an ADA compliance review:
 - Always distinguish between Title II (government) and Title III (private business) requirements
 - Reference specific WCAG success criteria by number when reporting digital issues
 - Reference 2010 ADA Standards section numbers for physical facility issues
-- Note that WCAG 2.2 is recommended for future-proofing even though 2.1 is the legal minimum
+- Note that WCAG 2.2 is recommended for future-proofing even though 2.1 is the legal minimum (see WCAG 2.2 New Criteria section for specifics)
 - Never recommend overlay widgets as a compliance solution
 - Emphasize that automated testing alone is insufficient
 - Include remediation priority (critical > major > minor)
@@ -229,8 +277,11 @@ When conducting an ADA compliance review:
 ## References
 
 - ADA.gov: https://www.ada.gov/
+- DOJ 2024 Final Rule (Title II): https://www.ada.gov/resources/title-ii-rule/
 - WCAG 2.1: https://www.w3.org/TR/WCAG21/
+- WCAG 2.2: https://www.w3.org/TR/WCAG22/
 - WCAG Quick Reference: https://www.w3.org/WAI/WCAG22/quickref/
+- Section 508: https://www.section508.gov/
 - ADA Facility Checklist: https://adachecklist.org/
 - 2010 ADA Standards: https://www.ada.gov/law-and-regs/design-standards/
 - U.S. Access Board: https://www.access-board.gov/ada/
