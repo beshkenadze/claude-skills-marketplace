@@ -181,6 +181,34 @@
       "source": "./skills/enterprise/ada-compliance",
       "category": "enterprise",
       "version": "1.0.0"
+    },
+    {
+      "name": "eaa-compliance",
+      "description": "Use when auditing digital products or services for European Accessibility Act (EAA) compliance, checking EN 301 549 conformance, or advising on EU Web Accessibility Directive obligations.",
+      "source": "./skills/enterprise/eaa-compliance",
+      "category": "enterprise",
+      "version": "1.0.0"
+    },
+    {
+      "name": "aoda-compliance",
+      "description": "Use when auditing websites or apps for Canadian accessibility law compliance, checking AODA (Ontario) or Accessible Canada Act (federal) requirements, or advising on CAN/ASC-EN 301 549 obligations.",
+      "source": "./skills/enterprise/aoda-compliance",
+      "category": "enterprise",
+      "version": "1.0.0"
+    },
+    {
+      "name": "jis-accessibility",
+      "description": "Use when auditing websites for Japanese accessibility compliance, checking JIS X 8341-3 conformance, or advising on Japan's Act for Eliminating Discrimination against Persons with Disabilities.",
+      "source": "./skills/enterprise/jis-accessibility",
+      "category": "enterprise",
+      "version": "1.0.0"
+    },
+    {
+      "name": "global-accessibility",
+      "description": "Use when determining which accessibility law applies to an organization, comparing requirements across jurisdictions (US, EU, Canada, Japan), or planning multi-country accessibility compliance strategy.",
+      "source": "./skills/enterprise/global-accessibility",
+      "category": "enterprise",
+      "version": "1.0.0"
     }
   ]
 }
