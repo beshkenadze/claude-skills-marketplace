@@ -148,6 +148,13 @@
       "version": "1.0.0"
     },
     {
+      "name": "zamokctl",
+      "description": "Use when generating/managing the offline root signing key or signing & publishing Zamok product keysets from the terminal (zamokctl Swift CLI / ZamokApp). Triggers — 'generate root key', 'rotate root', 'publish keyset', 'sign keyset', 'escrow root key', 'zamokctl', 'trusted-roots.json'.",
+      "source": "./skills/development/zamokctl",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
       "name": "biome",
       "description": "Fast linting/formatting for TypeScript/React. Use when setting up linter, migrating from ESLint/Prettier, or running code quality checks.",
       "source": "./skills/development/biome",
@@ -165,13 +172,6 @@
       "name": "codex-code-review",
       "description": "Use Codex CLI for AI-powered code review. Use when wanting 'codex review', 'review with codex', AI code review before PR/merge, or CI/CD code review integration.",
       "source": "./skills/development/codex-code-review",
-      "category": "development",
-      "version": "1.0.0"
-    },
-    {
-      "name": "ralphex",
-      "description": "Autonomous plan execution with Claude Code. Use when creating implementation plans, running ralphex CLI, or needing AI-driven autonomous development workflow.",
-      "source": "./skills/development/ralphex",
       "category": "development",
       "version": "1.0.0"
     },
