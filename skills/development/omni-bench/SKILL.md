@@ -1,7 +1,7 @@
 ---
 name: omni-bench
 description: Develop the omni-bench benchmark framework (ASR/STT + text generation) built on a producer/scorer split with an open JSON spec as SSOT. Use when working in an omni-bench checkout — changing the JSON schemas, the prepare/producer/scorer/diff pipeline, the adapter seams (Transcriber / Generator), datasets, fixtures, or the Swift producer SDK; or when running and validating benchmark artifacts. Encodes the schema-evolution rules, determinism invariants, commands, and repo gotchas that are easy to get wrong.
-version: 1.0.0
+version: 1.0.1
 ---
 
 # omni-bench development
@@ -15,8 +15,8 @@ wrapping in-process models (e.g. mlx-omni).
 ## Layout
 
 - `schemas/*.schema.json` — **the SSOT** (open spec, JSON Schema draft 2020-12).
-  Everything else follows it. Pinned `schema_version` (`0.2.0` as of the
-  text-generation modality).
+  Everything else follows it. Pinned `schema_version` (`0.1.0`, re-cut
+  2026-07-04 — the pre-release 0.1.0/0.2.0 iterations are retired).
 - `python/src/omni_bench/` — `core/` (prepare, producer, scorer, diff, validate,
   identity, hardware), `asr/` (normalizers, metrics, registry — the registry is
   the modality-agnostic task table despite the package name), `textgen/`

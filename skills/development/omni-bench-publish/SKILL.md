@@ -1,7 +1,7 @@
 ---
 name: omni-bench-publish
 description: Publish a scored omni-bench result (ASR or text-generation) to a leaderboard platform (e.g. bench.bshk.app) via its write API. Use when asked to publish, upload, submit, or "send a report" for an omni-bench result.json or parity-report.json — sharing ASR WER/RTFx numbers or text-generation TTFT/tok-per-s/prompt-cache numbers. Covers the one modality-agnostic `omni-bench publish` command and the MANDATORY secret handling: the api-key is injected from a secrets manager (1Password `op run` / AgentVault `av run`) at runtime, never read into context, never hardcoded.
-version: 1.0.0
+version: 1.0.1
 ---
 
 # Publishing omni-bench results (ASR or text generation)
@@ -69,6 +69,6 @@ op run --env-file .env.omni -- omni-bench publish --result runs/x.result.json --
 
 ## Notes
 
-- Schema is pinned; current omni-bench emits `0.2.0` (the platform also still accepts `0.1.0`).
+- Schema is pinned; current omni-bench emits `0.1.0` (re-cut 2026-07-04 — the earlier pre-release 0.1.0/0.2.0 shapes are retired and rejected with 422; the platform accepts only the re-cut 0.1.0).
 - Identity fields (`model.sha256`, `backend.build_sha`, `hardware.soc/mem_gb`, `run_profile.decode`) feed `identity_key` — fill them honestly or the parity join / dedupe breaks.
 - A text-gen result with no references legitimately has `quality: null` — it still publishes (the ingest guard rejects only a row with no headline metric: ASR needs `quality`, text-gen needs `tok_per_s` or `ttft_s_p50`).

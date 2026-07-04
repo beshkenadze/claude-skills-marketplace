@@ -215,14 +215,14 @@
       "description": "Develop the omni-bench benchmark framework (ASR/STT + text generation) built on a producer/scorer split with an open JSON spec as SSOT. Use when working in an omni-bench checkout — changing the JSON schemas, the prepare/producer/scorer/diff pipeline, the adapter seams (Transcriber / Generator), datasets, fixtures, or the Swift producer SDK; or when running and validating benchmark artifacts. Encodes the schema-evolution rules, determinism invariants, commands, and repo gotchas that are easy to get wrong.",
       "source": "./skills/development/omni-bench",
       "category": "development",
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     {
       "name": "omni-bench-publish",
       "description": "Publish a scored omni-bench result (ASR or text-generation) to a leaderboard platform (e.g. bench.bshk.app) via its write API. Use when asked to publish, upload, submit, or \"send a report\" for an omni-bench result.json or parity-report.json — sharing ASR WER/RTFx numbers or text-generation TTFT/tok-per-s/prompt-cache numbers. Covers the one modality-agnostic `omni-bench publish` command and the MANDATORY secret handling: the api-key is injected from a secrets manager (1Password `op run` / AgentVault `av run`) at runtime, never read into context, never hardcoded.",
       "source": "./skills/development/omni-bench-publish",
       "category": "development",
-      "version": "1.0.0"
+      "version": "1.0.1"
     }
   ]
 }
