@@ -43,14 +43,15 @@ manifest.json (+references.jsonl) → run-artifact.jsonl → result.json → par
 - ASR: `Transcriber.transcribe(audio, language, task) -> Transcript`.
 - Text generation: `Generator.generate(prompt, task) -> Generation` +
   `reset_cache()`. All latency/token metrics (`ttft_s`, `prefill_s`,
-  `generated_tokens`, `reused_tokens`, `cache_hit`, `decode_s`) are
-  **host-reported** via `backend_native` — the seam is non-streaming, the
-  producer cannot observe TTFT. The scorer derives `tok_per_s` (micro).
+  `prompt_tokens`, `generated_tokens`, `reused_tokens`, `cache_hit`, `decode_s`)
+  are **host-reported** via `backend_native` — the seam is non-streaming, the
+  producer cannot observe TTFT. The scorer derives the rates: `tok_per_s`
+  (micro) and `prefill_tok_per_s` (cold samples only in cache mode — cache-free).
 - Shared-prefix cold/warm scenario: `mode: "shared_prefix_cold_warm"` +
   per-sample `prefix_group`. Producer resets the cache at every group boundary;
   first sample after reset is `phase: "cold"`, rest `"warm"`; **nothing is
   warmup-discarded** — the scorer's `cache` block reports cold/warm medians and
-  `delta = cold − warm`. Built-in offline task: `textgen.shared_prefix.en.v1`.
+  `ttft_speedup = cold / warm`. Built-in offline task: `textgen.shared_prefix.en.v1`.
 
 ## Schema evolution rules (bite hard)
 
