@@ -209,6 +209,13 @@
       "source": "./skills/enterprise/global-accessibility",
       "category": "enterprise",
       "version": "1.0.0"
+    },
+    {
+      "name": "omni-bench",
+      "description": "Develop the omni-bench benchmark framework (ASR/STT + text generation) built on a producer/scorer split with an open JSON spec as SSOT. Use when working in an omni-bench checkout — changing the JSON schemas, the prepare/producer/scorer/diff pipeline, the adapter seams (Transcriber / Generator), datasets, fixtures, or the Swift producer SDK; or when running and validating benchmark artifacts. Encodes the schema-evolution rules, determinism invariants, commands, and repo gotchas that are easy to get wrong.",
+      "source": "./skills/development/omni-bench",
+      "category": "development",
+      "version": "1.0.0"
     }
   ]
 }
