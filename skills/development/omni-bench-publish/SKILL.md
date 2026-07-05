@@ -20,7 +20,7 @@ wrote the correct row shape and the platform detects the modality from it.
 
 ## The command (same for ASR and text-gen)
 
-`omni-bench publish` reads the key from `$OMNI_API_KEY`; ownership is taken from the
+`omni-bench publish` reads the key from `$OMNI_BENCH_API_KEY`; ownership is taken from the
 key's principal server-side, never from the document body.
 
 ```
@@ -38,13 +38,13 @@ runtime so the value never enters your shell or context. In order of preference:
 
 - **1Password (`op run`) — recommended.** Put an `op://` *reference* (not the value) in an env-file:
   ```
-  printf 'OMNI_API_KEY=op://<vault>/<item>/api-key\n' > .env.omni
+  printf 'OMNI_BENCH_API_KEY=op://<vault>/<item>/api-key\n' > .env.omni
   op run --env-file .env.omni -- omni-bench publish --result runs/x.result.json --url https://bench.bshk.app
   ```
   If the field lives in a section, the reference includes it (`op://<vault>/<item>/<section>/api-key`); run `op item get <item> --format json` and copy the field's `reference` verbatim.
-- **AgentVault (`av run`).** `av add OMNI_API_KEY` (value entered at the TTY prompt, never an argument); an `agentvault.yaml` maps a profile to `{ ref: av://file/OMNI_API_KEY, tier: normal }`; then
+- **AgentVault (`av run`).** `av add OMNI_BENCH_API_KEY` (value entered at the TTY prompt, never an argument); an `agentvault.yaml` maps a profile to `{ ref: av://file/OMNI_BENCH_API_KEY, tier: normal }`; then
   `av run --profile <p> -- omni-bench publish --result runs/x.result.json --url https://bench.bshk.app`.
-- **CI / other manager.** Expose `OMNI_API_KEY` in the publish step's env only — e.g. GitHub Actions `env: { OMNI_API_KEY: ${{ secrets.OMNI_API_KEY }} }`.
+- **CI / other manager.** Expose `OMNI_BENCH_API_KEY` in the publish step's env only — e.g. GitHub Actions `env: { OMNI_BENCH_API_KEY: ${{ secrets.OMNI_BENCH_API_KEY }} }`.
 
 `op read` / `av read` print a raw value — they are **human-at-a-TTY** tools (they refuse pipes/files), not for the agent. Always use the `run` wrappers, which resolve the reference into the subprocess env and keep the value out of your context.
 
