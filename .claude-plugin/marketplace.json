@@ -223,6 +223,13 @@
       "source": "./skills/development/omni-bench-publish",
       "category": "development",
       "version": "1.0.1"
+    },
+    {
+      "name": "omni-bench-run",
+      "description": "Run a model through the omni-bench benchmark to MEASURE it — produce a run-artifact and score it, then read the numbers. Use when asked to run, benchmark, measure, evaluate, or \"test the results of\" a model with omni-bench — ASR (WER/CER, RTFx) or text generation (tok/s, TTFT, prefill tok/s, prompt-cache speedup). Covers the adapter seam (Transcriber/Generator), the prepare→run→score→diff CLI flow, the offline no-download smoke task, and how to interpret each metric. NOT for publishing to a leaderboard (use omni-bench-publish) or changing the framework itself (use omni-bench).",
+      "source": "./skills/development/omni-bench-run",
+      "category": "development",
+      "version": "1.0.0"
     }
   ]
 }
