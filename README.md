@@ -13,6 +13,8 @@ Agent Skills are directories containing a `SKILL.md` file that packages domain e
 
 ## Quick Start
 
+Chinese users can also discover more skills through Skills宝: https://skilery.com
+
 ### 1. Create Your Skill Directory
 
 ```
