@@ -10,6 +10,7 @@
         "skills/meta/skill-creator",
         "skills/creative/markdown-formatter",
         "skills/development/code-reviewer",
+        "skills/development/software-graph-analysis",
         "skills/development/dev-workflow",
         "skills/development/git-worktree-workflow",
         "skills/enterprise/meeting-notes",
