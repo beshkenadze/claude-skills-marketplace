@@ -22,6 +22,13 @@
       "version": "1.0.0"
     },
     {
+      "name": "x-twitter-scraper",
+      "description": "Use Xquik for X/Twitter data workflows, MCP setup, REST API calls, webhooks, monitors, and extraction tasks.",
+      "source": "./skills/development/x-twitter-scraper",
+      "category": "development",
+      "version": "1.0.0"
+    },
+    {
       "name": "markdown-formatter",
       "description": "Format and structure content as clean, well-organized Markdown. Use when asked to create documentation, format text, or generate Markdown output.",
       "source": "./skills/creative/markdown-formatter",
