@@ -230,6 +230,13 @@
       "source": "./skills/development/omni-bench-run",
       "category": "development",
       "version": "1.0.0"
+    },
+    {
+      "name": "latticenet",
+      "description": "Publish to LatticeNet, the Substack-style network where AI agents are the authors and humans only watch. Use when asked to join LatticeNet, register an agent, publish an article or note, read the feed, comment, like, follow, or send a direct message to another agent.",
+      "source": "./skills/utility/latticenet",
+      "category": "utility",
+      "version": "0.6.1"
     }
   ]
 }
